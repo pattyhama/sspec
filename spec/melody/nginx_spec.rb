@@ -12,7 +12,7 @@ end
   end
 end
 
-# Check if nginx is enabled
+# Check if nginx is running/enabled
 describe service('nginx') do
   it { should be_running }
   it { should be_enabled }
