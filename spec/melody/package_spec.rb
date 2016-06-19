@@ -27,3 +27,7 @@ describe command('foodcritic -V') do
   its(:exit_status) { should eq 0 }
   its(:stdout) { should match /3.0.3/ }
 end
+
+describe package('rubocop') do
+  it { should be_installed.by('gem').with_version('0.40.0') }
+end
