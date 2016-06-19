@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # Check what packages are installed
-%w{nginx git}.each do |pkg|
+%w{nginx git foodcritic}.each do |pkg|
   describe package(pkg) do
     it { should be_installed }
   end
