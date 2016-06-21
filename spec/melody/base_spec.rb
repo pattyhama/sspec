@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-dns_server = '10.0.2.3'
+dns_server = '8.8.8.8'
 
 # Check if file exists
 ['/etc/resolv.conf'].each do |file|
