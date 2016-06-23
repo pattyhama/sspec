@@ -30,3 +30,9 @@ describe routing_table do
     )
   end
 end
+
+# Check ping reachability
+describe host('8.8.8.8') do
+  # ping
+  it { should be_reachable }
+end
