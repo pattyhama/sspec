@@ -19,3 +19,14 @@ end
 describe host('github.com') do
   it { should be_resolvable }
 end
+
+# Check routing table
+describe routing_table do
+  it do
+    should have_entry(
+      :destination => '8.8.8.8',
+      :interface   => 'eth0',
+      :gateway     => '10.0.2.2',
+    )
+  end
+end
