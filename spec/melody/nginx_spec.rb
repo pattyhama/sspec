@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 # Check if file exists
-['/etc/nginx/nginx.conf'].each do |file|
-  describe file(file) do
-    it { should be_file }
-  end
-end
+# ['/etc/nginx/nginx.conf'].each do |file|
+#  describe file(file) do
+#    it { should be_file }
+#  end
+#end
 
 # Check if nginx is running/enabled
 describe service('nginx') do
