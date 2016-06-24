@@ -5,7 +5,7 @@ require 'spec_helper'
 #  describe file(file) do
 #    it { should be_file }
 #  end
-#end
+# end
 
 # Check if nginx is running/enabled
 describe service('nginx') do
