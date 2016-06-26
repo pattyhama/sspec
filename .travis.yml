@@ -19,6 +19,6 @@ before_install:
   - gem update bundler
 
 script:
-  - bundle exec rake spec
+  - bundle exec rspec spec/container_spec.rb
 
 cache: bundler
