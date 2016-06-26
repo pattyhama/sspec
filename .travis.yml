@@ -1,4 +1,16 @@
+sudo: required
+
 language: ruby
+
+services:
+  - docker
+
+env:
+  - TARGET_CONTAINER_ID=container-php-emacs
+
+before_script:
+  - docker build -t php-emacs .
+  - docker run -d --name $TARGET_CONTAINER_ID php-emacs
 
 rvm:
   - 2.0.0
@@ -9,5 +21,4 @@ before_install:
 script:
   - bundle exec rake spec
 
-sudo: false
 cache: bundler
