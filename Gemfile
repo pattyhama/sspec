@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'serverspec'
+gem 'rake'
+
 # Specify your gem's dependencies in serverspec.gemspec
 gemspec
 
