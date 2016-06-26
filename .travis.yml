@@ -9,5 +9,5 @@ before_install:
 script:
   - bundle exec rake spec
 
-sudo: required
-# cache: bundler
+sudo: false
+cache: bundler
