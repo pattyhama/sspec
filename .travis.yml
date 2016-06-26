@@ -1,24 +1,19 @@
 sudo: required
-
 language: ruby
-
 services:
-  - docker
-
+- docker
 env:
-  - TARGET_CONTAINER_ID=container-php-emacs
-
+- TARGET_CONTAINER_ID=container-php-emacs
 before_script:
-  - docker build -t php-emacs .
-  - docker run -d --name $TARGET_CONTAINER_ID php-emacs
-
+- docker build -t php-emacs .
+- docker run -d --name $TARGET_CONTAINER_ID php-emacs
 rvm:
-  - 2.0.0
-
+- 2.0.0
 before_install:
-  - gem update bundler
-
+- gem update bundler
 script:
-  - bundle exec rake spec SPEC=spec/container_spec.rb
-
+- bundle exec rake spec SPEC=spec/container_spec.rb
 cache: bundler
+notifications:
+  slack:
+    secure: FxutrxtCPcaO7QQO+uU/8vVVmJV8iFpwA3+QWvsV9VO9UkZZ0oAzzWKyjwKaXq3KuktqLSHqcXa/EXy5DD1ClsVJFv1hENPp3pJqC0WMMlq/rdNfcUNmA5ItL72sdGrW6p5USVBCUqrqLqyjtypucsiKUHnw6Vyu7cEQa6JZr9HlOee3RUojRhJrf2lvDRYanvCR7tMSZMzPHcmiO6YSuudMgBx04tgw1nIrgjAjBPnYmaghnzZ4lXguAe4cqMR6Q5YGI3qz8faS2MTc3qMKnP1dJxKdqX5J/664rGQMQYnzuE7UV2siqqC/3NWAv3UH8pVf9hybNwiHDlGX7I/NwnFd3jM/ZWMigY1gv960ZN5UBXCpIluB+tF45t0j601OuiwZbnw/ZgSrR3KGwO2XAZDEhxxdYMqIJDRsqD4I+Tw2QgcdBz4w+XotEDpj7UoFFwT0V/UXlzXmIFNvK6hT3CmSkjcciT4F4tjXuFxbRMbc8AvwsyhBJAEe5V/4nepH3wA7cS0gntdyfFYvankeinD74LIAroNZIDqObjNLgxLVXoo/RdljTdxGlV6YKgXAhO6ALEXhsfYVc1nmO5Bp7zOKiXb9hGqXk2ql20EpzE/oh+/4EmH+rxP6mCn3wlDh0BrGgjgS6ZYU7r0k62HkqJXFKGhogTTG6h6e4LsYF6k=
