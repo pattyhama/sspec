@@ -2,14 +2,12 @@ language: ruby
 
 rvm:
   - 2.0.0
-  - jruby
-  - rbx-2
 
 before_install:
   - gem update bundler
 
 script:
-  - bundle exec rspec
+  - bundle exec rake spec
 
 sudo: required
-cache: bundler
+# cache: bundler
