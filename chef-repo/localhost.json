@@ -6,6 +6,6 @@
         "name-server" : "8.8.8.8"
  },
  "run_list" : [
-        "recipe[base::resolv]",
+        "recipe[base::resolv]"
  ]
 }
