@@ -1,3 +1,3 @@
 file_cache_path "/tmp/chef-solo"
-cookbook_path ["./cookbooks"]
+# cookbook_path ["./cookbooks"]
 log_level :debug
