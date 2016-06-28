@@ -8,8 +8,18 @@ require 'spec_helper'
 end
 
 # Check installed package version
+# describe command('chef-solo -v') do
+#  its(:stdout) { should match /11.8.2/ }
+#end
+
+%w(chef).each do |pkg|
+  describe package(pkg) do
+    it { should be_installed }
+  end
+end
+
 describe command('chef-solo -v') do
-  its(:stdout) { should match /11.8.2/ }
+  its(:stdout) { should match /12.11.18/ }
 end
 
 describe command('nginx -v') do

@@ -15,7 +15,7 @@ script:
 # Chef
 # - chef-solo -c chef-repo/solo.rb -j chef-repo/localhost.json
 # Serverspec
-- bundle exec rake spec SPEC=spec/melody/base_spec.rb
+- bundle exec rake spec SPEC=spec/melody/package_spec.rb
 # Below reference: http://www.creationline.com/lab/2585
 # - bundle exec rake knife
 # - bundle exec rake foodcritic
