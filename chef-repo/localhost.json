@@ -1,0 +1,11 @@
+{
+ "nginx" : {
+        "port" : 80
+ },
+ "base" : {
+        "name-server" : "8.8.8.8"
+ },
+ "run_list" : [
+        "recipe[base::resolv]",
+ ]
+}

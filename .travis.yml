@@ -12,7 +12,10 @@ before_install:
 rvm:
 - 2.0.0
 script:
-- bundle exec rake spec SPEC=spec/melody/package_spec.rb
+# Chef
+- chef-solo -c chef-repo/solo.rb -j chef-repo/localhost.json
+# Serverspec
+- bundle exec rake spec SPEC=spec/melody/base_spec.rb
 cache: bundler
 notifications:
   slack:
