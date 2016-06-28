@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'serverspec'
 gem 'rake'
 gem 'docker-api'
+gem 'chef'
 
 # Specify your gem's dependencies in serverspec.gemspec
 # gemspec
