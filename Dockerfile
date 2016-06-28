@@ -10,7 +10,10 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install -y git=1.9.1
-RUN apt-get install -y foodcritic=3.0.3-1
-RUN apt-get install -y traceroute=2.0.20
-RUN gem install rubocop=3.0.3-1
+RUN apt-get install -y git
+RUN apt-get install -y foodcritic
+RUN apt-get install -y traceroute
+RUN apt-get install -y nginx
+RUN apt-get install -y chef
+
+RUN gem install rubocop
