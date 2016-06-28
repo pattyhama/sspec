@@ -9,3 +9,4 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 
 RUN apt-get update
 RUN apt-get upgrade -y
+RUN pwd
