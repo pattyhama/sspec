@@ -10,7 +10,7 @@ before_script:
 before_install:
 - gem update bundler
 rvm:
-- 2.0.0
+- 2.1.0
 script:
 # Chef
 - chef-solo -c chef-repo/solo.rb -j chef-repo/localhost.json
