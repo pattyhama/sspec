@@ -3,16 +3,16 @@ language: ruby
 services:
 - docker
 env:
-- TARGET_CONTAINER_ID=container-php-emacs
+- TARGET_CONTAINER_ID=container-melody
 before_script:
-- docker build -t php-emacs .
-- docker run -d --name $TARGET_CONTAINER_ID php-emacs
-rvm:
-- 2.0.0
+- docker build -t melody .
+- docker run -d --name $TARGET_CONTAINER_ID melody
 before_install:
 - gem update bundler
+rvm:
+- 2.0.0
 script:
-- bundle exec rake spec SPEC=spec/container_spec.rb
+- bundle exec rake spec SPEC=spec/melody/package_spec.rb
 cache: bundler
 notifications:
   slack:
