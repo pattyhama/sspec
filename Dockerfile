@@ -10,7 +10,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install curl
+RUN apt-get install -y curl
 
 RUN curl -L http://www.opscode.com/chef/install.sh | bash
 ENV CHEF_REPO /root/chef-repo
