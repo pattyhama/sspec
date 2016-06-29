@@ -7,10 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package 'git' do
-  action [:install]
-end
-
 package 'foodcritic' do
   action [:install]
 end
