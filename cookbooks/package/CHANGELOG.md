@@ -1,9 +1,9 @@
-# base CHANGELOG
+# package CHANGELOG
 
-This file is used to list changes made in each version of the base cookbook.
+This file is used to list changes made in each version of the package cookbook.
 
 ## 0.1.0
-- [your_name] - Initial release of base
+- [your_name] - Initial release of package
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
