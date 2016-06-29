@@ -17,10 +17,9 @@ ENV CHEF_REPO /root/chef-repo
 WORKDIR /root/dockerbuild
 
 RUN curl -L http://www.opscode.com/chef/install.sh | bash
-RUN cd ${CHEF_REPO} && bundle install
 
 ADD cookbooks ${CHEF_REPO}/cookbooks
 ADD solo.rb ${CHEF_REPO}/solo.rb
 ADD localhost.json ${CHEF_REPO}/localhost.json
 
-RUN cd ${CHEF_REPO} && /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
+RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
