@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'serverspec'
-gem 'rake'
+# gem 'rake'
 gem 'docker-api'
 
 # Specify your gem's dependencies in serverspec.gemspec

@@ -1,6 +1,5 @@
 require 'serverspec'
 require 'docker'
-require 'net/ssh'
 
 # Serverspec でコンテナのテストを行う
 set :backend, :docker
