@@ -11,6 +11,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 RUN apt-get install -y curl
+RUN apt-get install -y build-essential
 
 ENV CHEF_REPO /root/chef-repo
 
