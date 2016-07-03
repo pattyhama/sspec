@@ -11,7 +11,7 @@ package 'traceroute' do
   action [:install]
 end
 
-%W{ git foodcritic nginx }.each do |pkg|
+%W{ foodcritic nginx }.each do |pkg|
   package "#{pkg}" do
     action [ :install ]
   end
