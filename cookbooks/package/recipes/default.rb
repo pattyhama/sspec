@@ -20,6 +20,7 @@ end
 gem_package 'pry' do
   action [ :install ]
   options "--no-rdoc --no-ri"
+  gem_binary '/usr/bin/gem'
 end
 
 # gem_package 'foodcritic' do
