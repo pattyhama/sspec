@@ -11,7 +11,7 @@ package 'traceroute' do
   action [:install]
 end
 
-%W{ gem nginx }.each do |pkg|
+%W{ ruby nginx }.each do |pkg|
   package "#{pkg}" do
     action [ :install ]
   end
@@ -20,7 +20,10 @@ end
 gem_package 'pry' do
   action [ :install ]
   options "--no-rdoc --no-ri"
-  gem_binary '/usr/bin/gem'
+end
+
+execute 'test' do
+   command 'pwd && which ruby && which gem'
 end
 
 # gem_package 'foodcritic' do
