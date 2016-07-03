@@ -20,7 +20,7 @@ script:
 - bundle exec rspec spec/melody/package_spec.rb
 # Below reference: http://www.creationline.com/lab/2585
 # - bundle exec rake knife
-- bundle exec rake foodcritic
+- bundle exec rake foodcritic cookbooks/package/
 cache: bundler
 notifications:
   slack:
