@@ -16,3 +16,8 @@ end
     action [ :install ]
   end
 end
+
+gem_package 'foodcritic' do
+  action [ :install ]
+  options "--no-rdoc --no-ri"
+end
