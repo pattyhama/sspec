@@ -1,7 +1,14 @@
 require 'serverspec'
+require 'docker'
 require 'net/ssh'
 
-set :backend, :ssh
+# Serverspec でコンテナのテストを行う
+set :backend, :docker
+set :docker_image, 'melody'
+
+# set :docker_url, ENV['DOCKER_HOST']
+# set :docker_container, ENV['TARGET_CONTAINER_ID']
+
 
 if ENV['ASK_SUDO_PASSWORD']
   begin
@@ -22,11 +29,6 @@ options[:user] ||= Etc.getlogin
 
 set :host,        options[:host_name] || host
 set :ssh_options, options
-
-# Serverspec でコンテナのテストを行う
-set :backend, :docker
-set :docker_url, ENV['DOCKER_HOST']
-set :docker_container, ENV['TARGET_CONTAINER_ID']
 
 # Disable sudo
 # set :disable_sudo, true

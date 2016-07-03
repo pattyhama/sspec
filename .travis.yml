@@ -3,12 +3,11 @@ language: ruby
 services:
 - docker
 env:
-- TARGET_CONTAINER_ID=container-melody
+- TARGET_CONTAINER_ID=melody
 before_script:
 - docker build -t melody .
 - docker run -d --name $TARGET_CONTAINER_ID melody
 before_install:
-- sudo apt-get update
 - gem update bundler
 rvm:
 - 2.1
