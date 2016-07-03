@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # Check installed packages
-%w(chef traceroute nginx).each do |pkg|
+%w(chef traceroute nginx foodcritic).each do |pkg|
   describe package(pkg) do
     it { should be_installed }
   end
@@ -11,6 +11,6 @@ end
 #  it { should be_installed.by('gem') }
 # end
 
-describe package('foodcritic') do
-  it { should be_installed.by('gem') }
-end
+# describe package('foodcritic') do
+#  it { should be_installed.by('gem') }
+# end

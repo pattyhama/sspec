@@ -6,6 +6,7 @@ FROM ubuntu
 MAINTAINER Harumi Hamaoka <strodr@gmail.com>
 
 # RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+# RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 
 RUN apt-get update
 RUN apt-get upgrade -y
