@@ -3,7 +3,8 @@ require 'docker'
 
 # Serverspec でコンテナのテストを行う
 set :backend, :docker
-set :docker_image, 'melody'
+# set :docker_image, 'melody'
+set :docker_image, ENV['TARGET_CONTAINER_ID']
 
 # set :docker_url, ENV['DOCKER_HOST']
 # set :docker_container, ENV['TARGET_CONTAINER_ID']
