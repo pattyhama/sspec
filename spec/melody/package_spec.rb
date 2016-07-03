@@ -8,9 +8,9 @@ require 'spec_helper'
 end
 
 describe package('rubocop') do
-  it { should be_installed.by('gem').with_version('0.41.1') }
+  it { should be_installed.by('gem') }
 end
 
 describe package('foodcritic') do
-  it { should be_installed.by('gem').with_version('6.3.0') }
+  it { should be_installed.by('gem') }
 end
