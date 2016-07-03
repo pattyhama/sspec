@@ -14,12 +14,7 @@ before_install:
 rvm:
 - 2.1
 script:
-# Chef
-# - chef-solo -c chef-repo/solo.rb -j chef-repo/localhost.json
-# Serverspec
 - bundle exec rspec spec/melody/package_spec.rb
-# Below reference: http://www.creationline.com/lab/2585
-# - bundle exec rake knife
 - bundle exec foodcritic cookbooks/package/
 cache: bundler
 notifications:

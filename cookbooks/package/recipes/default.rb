@@ -8,16 +8,16 @@
 #
 
 package 'traceroute' do
-  action [:install]
+  action :install
 end
 
 %W{ nginx }.each do |pkg|
-  package "#{pkg}" do
-    action [ :install ]
+  package pkg do
+    action :install
   end
 end
 
 gem_package 'pry' do
-  action [ :install ]
+  action :install
   options "--no-rdoc --no-ri"
 end
