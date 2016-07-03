@@ -1,5 +1,7 @@
 sudo: required
 language: ruby
+gemfile:
+- Gemfile
 services:
 - docker
 env:
@@ -16,10 +18,9 @@ script:
 # - chef-solo -c chef-repo/solo.rb -j chef-repo/localhost.json
 # Serverspec
 - bundle exec rspec spec/melody/package_spec.rb
-# - bundle exec rake spec SPEC=spec/melody/package_spec.rb
 # Below reference: http://www.creationline.com/lab/2585
 # - bundle exec rake knife
-# - bundle exec rake foodcritic
+- bundle exec rake foodcritic
 cache: bundler
 notifications:
   slack:
