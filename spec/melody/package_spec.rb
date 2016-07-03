@@ -11,6 +11,10 @@ end
 #  it { should be_installed.by('gem') }
 # end
 
-describe package('foodcritic') do
+# describe package('foodcritic') do
+#  it { should be_installed.by('gem') }
+# end
+
+describe package('pry') do
   it { should be_installed.by('gem') }
 end
