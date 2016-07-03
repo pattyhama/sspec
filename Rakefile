@@ -4,7 +4,6 @@ require 'rake'
 require 'rspec/core/rake_task'
 
 task :spec    => 'spec:all'
-# task :default => :spec
 task :default => [ :spec, :foodcritic ]
 
 desc 'foodcritic'

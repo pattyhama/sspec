@@ -11,11 +11,11 @@ MAINTAINER Harumi Hamaoka <strodr@gmail.com>
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install -y curl
 #for installing Chef
+RUN apt-get install -y curl
 
-RUN apt-get install -y make gcc ruby
 #for gem_package resource of Chef
+RUN apt-get install -y make gcc ruby
 
 ENV CHEF_REPO /root/chef-repo
 

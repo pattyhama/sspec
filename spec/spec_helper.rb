@@ -1,7 +1,7 @@
 require 'serverspec'
 require 'docker'
 
-# Serverspec でコンテナのテストを行う
+# Test Docker with Serverspec
 set :backend, :docker
 set :docker_image, ENV['TARGET_CONTAINER_ID']
 
