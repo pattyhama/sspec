@@ -16,7 +16,7 @@ rvm:
 script:
 - bundle exec rspec spec/melody/package_spec.rb
 - bundle exec foodcritic cookbooks/package/
-- bundle exec rubocop cookbooks/package/
+- bundle exec rubocop ./
 cache: bundler
 notifications:
   slack:
