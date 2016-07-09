@@ -1,6 +1,12 @@
 # This is the configuration used to check the rubocop source code.
 # Source: https://github.com/bbatsov/rubocop
 
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/melody/base_spec.rb'
+    - 'spec/melody/nginx_spec.rb'
+
 # Disable "Line is too long"
 Metrics/LineLength:
   Enabled: false
