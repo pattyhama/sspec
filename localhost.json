@@ -1,6 +1,6 @@
 {
  "run_list" : [
         "recipe[package]",
-        "recipe[nginx]"
+        "recipe[apache]"
  ]
 }
