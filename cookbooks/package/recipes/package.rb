@@ -13,10 +13,6 @@
   end
 end
 
-package 'nginx' do
-  action :install
-end
-
 gem_package 'pry' do
   action :install
   options '--no-rdoc --no-ri'
