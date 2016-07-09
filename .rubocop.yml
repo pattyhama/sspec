@@ -5,7 +5,6 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'spec/melody/base_spec.rb'
-    - 'spec/melody/nginx_spec.rb'
 
 # Disable "Line is too long"
 Metrics/LineLength:
