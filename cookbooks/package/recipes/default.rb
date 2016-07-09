@@ -8,5 +8,5 @@
 #
 
 # call recipe of package cookbook
-include_recipe "package::basic"
-include_recipe "package::web"
+include_recipe 'package::basic'
+include_recipe 'package::web'

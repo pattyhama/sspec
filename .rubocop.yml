@@ -1,0 +1,6 @@
+# This is the configuration used to check the rubocop source code.
+# Source: https://github.com/bbatsov/rubocop
+
+# Disable "Line is too long"
+Metrics/LineLength:
+  Enabled: false

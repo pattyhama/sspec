@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%W{ vim traceroute }.each do |pkg|
+%w( vim traceroute ).each do |pkg|
   package pkg do
     action :install
   end
@@ -15,5 +15,5 @@ end
 
 gem_package 'pry' do
   action :install
-  options "--no-rdoc --no-ri"
+  options '--no-rdoc --no-ri'
 end

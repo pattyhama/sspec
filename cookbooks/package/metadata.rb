@@ -1,4 +1,4 @@
-name             'package'
+name 'package'
 issues_url 'https://github.com/pattyhama/sspec/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/pattyhama/sspec' if respond_to?(:source_url)
 maintainer       'Harumi Hamaoka'
