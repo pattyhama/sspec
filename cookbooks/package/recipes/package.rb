@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: package
-# Recipe:: web
+# Recipe:: package
 #
 # Copyright 2016, Harumi Hamaoka
 #
