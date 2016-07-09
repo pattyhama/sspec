@@ -7,6 +7,17 @@
 # All rights reserved - Do Not Redistribute
 #
 
+%w(vim traceroute).each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
 package 'nginx' do
   action :install
+end
+
+gem_package 'pry' do
+  action :install
+  options '--no-rdoc --no-ri'
 end

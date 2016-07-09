@@ -8,6 +8,6 @@ require 'spec_helper'
 end
 
 describe package('pry') do
-#  let(:path) { '/opt/chef/embedded/lib/ruby/gems' }
+  #  let(:path) { '/opt/chef/embedded/lib/ruby/gems' }
   it { should be_installed.by('gem') }
 end
