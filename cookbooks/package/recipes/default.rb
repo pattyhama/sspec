@@ -7,17 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package 'traceroute' do
-  action :install
-end
-
-%W{ nginx }.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-gem_package 'pry' do
-  action :install
-  options "--no-rdoc --no-ri"
-end
+# call recipe of package cookbook
+include_recipe "package::basic"
+include_recipe "package::web"
