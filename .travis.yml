@@ -1,5 +1,4 @@
-# sudo: required
-sudo: false
+sudo: required
 language: ruby
 gemfile:
 - Gemfile

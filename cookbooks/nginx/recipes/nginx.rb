@@ -2,10 +2,18 @@
 # Cookbook Name:: nginx
 # Recipe:: nginx
 #
-# Copyright 2016, YOUR_COMPANY_NAME
+# Copyright 2016, Harumi Hamaoka
 #
 # All rights reserved - Do Not Redistribute
 #
+
+template '/etc/init.d/nginx' do
+  path '/etc/init.d/nginx'
+  source 'nginx-daemon.erb'
+  owner 'root'
+  group 'root'
+  mode 0755
+end
 
 service 'nginx' do
   supports status: true, restart: true, reload: true
