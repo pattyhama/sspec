@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# Ref: https://github.com/bkonkle/chef-cookbooks/blob/master/apache2/recipes/default.rb
+
 package 'apache2' do
   action :install
 end
