@@ -31,7 +31,8 @@ template 'apache2.conf' do
   notifies :restart, resources(service: 'apache2')
 end
 
-template '#{node[:apache][:dir]}/ports.conf' do
+template 'ports.conf' do
+  path "#{node[:apache][:dir]}/ports.conf"
   source 'ports.conf.erb'
   owner 'root'
   group 'root'
