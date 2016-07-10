@@ -24,10 +24,10 @@ end
     it { should be_file }
     it { should be_mode 644 }
     it { should contain 'hello apache' }
- end
+  end
 end
 
 # Check if HTTP status code 200 is returned
-describe command('curl http://127.0.0.1 -o /dev/null -w "%{http_code}\n" -s') do
-  its(:stdout) { should match /^200$/ }
-end
+# describe command('curl http://127.0.0.1 -o /dev/null -w "%{http_code}\n" -s') do
+#  its(:stdout) { should match /^200$/ }
+# end
