@@ -14,7 +14,7 @@ describe service('apache2') do
 end
 
 # Check if port 80 is listening
-describe port(80) do
+describe port(8080) do
   it { should be_listening }
 end
 
@@ -28,6 +28,6 @@ end
 # end
 
 # Check if HTTP status code 200 is returned
-describe command('curl http://127.0.0.1 -o /dev/null -w "%{http_code}\n" -s') do
-  its(:stdout) { should match /^200$/ }
-end
+# describe command('curl http://127.0.0.1 -o /dev/null -w "%{http_code}\n" -s') do
+#  its(:stdout) { should match /^200$/ }
+# end
