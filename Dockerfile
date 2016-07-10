@@ -33,4 +33,4 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 # RUN mkdir /etc/nginx/ssl
 # ADD default /etc/nginx/sites-available/default
 
-EXPOSE 8080
+EXPOSE 80

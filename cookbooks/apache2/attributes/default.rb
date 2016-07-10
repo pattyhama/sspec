@@ -276,8 +276,7 @@ end
 if node['apache']['service_name'].nil?
   default['apache']['service_name'] = node['apache']['package']
 end
-# default['apache']['listen']            = ['*:80']
-default['apache']['listen']            = ['*:8080']
+default['apache']['listen']            = ['*:80']
 default['apache']['contact']           = 'ops@example.com'
 default['apache']['timeout']           = 300
 default['apache']['keepalive']         = 'On'
@@ -286,8 +285,7 @@ default['apache']['keepalivetimeout']  = 5
 default['apache']['locale'] = 'C'
 default['apache']['sysconfig_additional_params'] = {}
 default['apache']['default_site_enabled'] = false
-# default['apache']['default_site_port']    = '80'
-default['apache']['default_site_port']    = '8080'
+default['apache']['default_site_port']    = '80'
 default['apache']['access_file_name'] = '.htaccess'
 default['apache']['default_release'] = nil
 

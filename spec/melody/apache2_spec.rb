@@ -14,7 +14,7 @@ describe service('apache2') do
 end
 
 # Check if port 80 is listening
-describe port(8080) do
+describe port(80) do
   it { should be_listening }
 end
 
