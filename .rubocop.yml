@@ -1,10 +1,14 @@
 # This is the configuration used to check the rubocop source code.
-# Source: https://github.com/bbatsov/rubocop
+# Ref: https://github.com/bbatsov/rubocop
+# Ref: http://rochefort.hatenablog.com/entry/2014/08/14/073000
 
 AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'spec/melody/base_spec.rb'
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
 
 # Disable "Line is too long"
 Metrics/LineLength:
