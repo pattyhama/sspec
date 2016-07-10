@@ -27,3 +27,12 @@ ADD localhost.json ${CHEF_REPO}/localhost.json
 
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
+
+# for Apache
+# RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+# RUN mkdir /etc/nginx/ssl
+# ADD default /etc/nginx/sites-available/default
+
+EXPOSE 8080
+
+CMD ["nginx"]
