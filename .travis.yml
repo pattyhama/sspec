@@ -15,7 +15,7 @@ rvm:
 - 2.1
 script:
 - bundle exec rspec spec/melody/package_spec.rb
-- bundle exec rspec spec/melody/apache_spec.rb
+- bundle exec rspec spec/melody/apache2_spec.rb
 - bundle exec foodcritic cookbooks/
 - bundle exec rubocop ./
 cache: bundler
