@@ -1,13 +1,14 @@
 # Original copyright 2008-2009, Opscode, Inc.
 # This file has been modified from the original Opscode version.
+# Ref: https://github.com/bkonkle/chef-cookbooks/blob/master/apache2/recipes/default.rb
 
 # Where the various parts of apache are
-set[:apache][:dir]     = "/etc/apache2"
-set[:apache][:log_dir] = "/var/log/apache2"
-set[:apache][:user]    = "www-data"
-set[:apache][:binary]  = "/usr/sbin/apache2"
-set[:apache][:icondir] = "/usr/share/apache2/icons"
-set[:apache][:cache_dir] = "/var/cache/apache2"
+override[:apache][:dir]     = "/etc/apache2"
+override[:apache][:log_dir] = "/var/log/apache2"
+override[:apache][:user]    = "www-data"
+override[:apache][:binary]  = "/usr/sbin/apache2"
+override[:apache][:icondir] = "/usr/share/apache2/icons"
+override[:apache][:cache_dir] = "/var/cache/apache2"
 
 # General settings
 default[:apache][:listen_ports] = [ "80","443" ]
