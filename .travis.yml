@@ -17,7 +17,8 @@ script:
 - bundle exec rspec spec/melody/package_spec.rb
 - bundle exec rspec spec/melody/apache_spec.rb
 - bundle exec foodcritic cookbooks/
-- bundle exec rubocop ./
+- bundle exec rubocop spec/
+- bundle exec rubocop cookbooks/
 cache: bundler
 notifications:
   slack:
