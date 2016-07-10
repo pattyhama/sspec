@@ -23,6 +23,7 @@ service 'apache2' do
 end
 
 template 'apache2.conf' do
+  path "#{node[:apache][:dir]}/apache2.conf"
   source 'apache2.conf.erb'
   owner 'root'
   group 'root'
