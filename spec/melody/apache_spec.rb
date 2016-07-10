@@ -13,8 +13,8 @@ describe service('apache2') do
   it { should be_enabled }
 end
 
-# Check if port 80 is listening
-describe port(80) do
+# Check if port 4000 is listening
+describe port(4000) do
   it { should be_listening }
 end
 
