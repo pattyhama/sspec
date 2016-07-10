@@ -20,10 +20,10 @@ end
 
 # Check if file exists
 ['/var/www/index.html'].each do |file|
- describe file(file) do
-   it { should be_file }
-   it { should be_mode 644 }
-   it { should contain 'hello apache' }
+  describe file(file) do
+    it { should be_file }
+    it { should be_mode 644 }
+    it { should contain 'hello apache' }
  end
 end
 
