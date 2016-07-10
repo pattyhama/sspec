@@ -34,5 +34,3 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 # ADD default /etc/nginx/sites-available/default
 
 EXPOSE 8080
-
-CMD ["nginx"]
