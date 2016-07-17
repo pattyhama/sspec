@@ -39,3 +39,4 @@ RUN apachectl configtest
 RUN apachectl status
 RUN ps aux | grep apache
 RUN curl http://localhost:80 || apachectl start
+RUN ps aux | grep apache
