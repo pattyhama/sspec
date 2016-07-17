@@ -18,6 +18,10 @@ describe port(80) do
   it { should be_listening }
 end
 
+describe port(8080) do
+  it { should be_listening }
+end
+
 # Check if file exists
 # ['/var/www/index.html'].each do |file|
 #   describe file(file) do

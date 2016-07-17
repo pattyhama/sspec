@@ -8,7 +8,8 @@ env:
 - TARGET_CONTAINER_ID=melody
 before_script:
 - docker build -t melody .
-- docker run -p 80:80 -d --name $TARGET_CONTAINER_ID melody
+- docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
+- docker ps
 before_install:
 - gem update bundler
 rvm:
