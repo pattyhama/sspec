@@ -12,10 +12,13 @@ env:
 before_install:
 - gem update bundler
 before_script:
-- docker build -t melody .
-# no cache
+# Create image named melody
+# for no cache
 # - docker build -no-cache -t melody .
-- docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
+- docker build -t melody .
+# Run the image with port redirection from host 8080 to 80
+# - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
+- docker run -d --name $TARGET_CONTAINER_ID melody
 - docker ps
 # for debug
 # - docker attach melody
