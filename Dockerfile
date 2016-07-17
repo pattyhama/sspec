@@ -17,9 +17,6 @@ RUN apt-get install -y curl
 # for gem_package resource of Chef
 RUN apt-get install -y make gcc ruby
 
-# for Apache
-EXPOSE 80
-
 # Setting up Chef
 ENV CHEF_REPO /root/chef-repo
 WORKDIR /root/dockerbuild
@@ -28,8 +25,13 @@ ADD cookbooks ${CHEF_REPO}/cookbooks
 ADD solo.rb ${CHEF_REPO}/solo.rb
 ADD localhost.json ${CHEF_REPO}/localhost.json
 
+# for Apache
+EXPOSE 80
+
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
+RUN curl http://localhost:80
+RUN curl http://localhost:8080
 
 # for Apache
 # RUN echo "daemon off;" >> /etc/nginx/nginx.conf
