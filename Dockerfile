@@ -17,6 +17,9 @@ EXPOSE 80
 # for installing Apache
 RUN apt-get install -y links
 
+# for installing for debug e.g. netstat
+RUN apt-get install -y net-tools
+
 # for installing Chef
 RUN apt-get install -y curl
 
