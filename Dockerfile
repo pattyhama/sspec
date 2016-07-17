@@ -26,7 +26,7 @@ RUN apt-get install -y make gcc ruby
 # Setting up Chef
 ENV CHEF_REPO /root/chef-repo
 WORKDIR /root/dockerbuild
-RUN curl -L http://www.opscode.com/chef/install.sh | bash
+RUN curl -L http://www.opscode.com/chef/install.sh | sudo bash
 ADD cookbooks ${CHEF_REPO}/cookbooks
 ADD solo.rb ${CHEF_REPO}/solo.rb
 ADD localhost.json ${CHEF_REPO}/localhost.json
@@ -37,8 +37,3 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 # for debug
 RUN apachectl configtest
 RUN apachectl status
-
-# for Apache
-# RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-# RUN mkdir /etc/nginx/ssl
-# ADD default /etc/nginx/sites-available/default
