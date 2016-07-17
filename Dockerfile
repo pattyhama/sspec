@@ -31,7 +31,7 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 # for Apache
 EXPOSE 80
 # CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
-CMD ["/usr/sbin/apache2", "-DFOREGROUND"]
+# CMD ["/usr/sbin/apache2", "-DFOREGROUND"]
 
 # for debug <from here>
 # for installing Apache
