@@ -17,8 +17,8 @@ before_script:
 # - docker build -no-cache -t melody .
 - docker build -t melody .
 - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
-- docker attach --name $TARGET_CONTAINER_ID melody
 - docker ps
+- docker attach melody
 script:
 - bundle exec rspec spec/melody/package_spec.rb
 - bundle exec rspec spec/melody/apache2_spec.rb
