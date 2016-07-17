@@ -15,7 +15,7 @@ RUN apt-get upgrade -y
 EXPOSE 80
 
 # for installing Apache
-RUN apt-get install links
+RUN apt-get install -y links
 
 # for installing Chef
 RUN apt-get install -y curl
