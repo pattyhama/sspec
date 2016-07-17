@@ -35,12 +35,10 @@ ADD localhost.json ${CHEF_REPO}/localhost.json
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 
 # for debug
-RUN useradd www-data
-RUN groupadd www-data
 RUN cat /etc/passwd
 RUN cat /etc/group
 RUN apachectl configtest
 RUN apachectl status
 RUN ps aux | grep apache
-RUN curl http://localhost:80 || apachectl start
+RUN curl http://localhost:80 || apachectl start ; echo $?
 RUN ps aux | grep apache
