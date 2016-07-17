@@ -11,9 +11,6 @@ MAINTAINER Harumi Hamaoka <strodr@gmail.com>
 RUN apt-get update
 RUN apt-get upgrade -y
 
-# for Apache
-EXPOSE 80
-
 # for installing Apache
 RUN apt-get install -y links
 
@@ -36,6 +33,10 @@ ADD localhost.json ${CHEF_REPO}/localhost.json
 
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
+
+# for Apache
+EXPOSE 80
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 # for debug
 RUN cat /etc/passwd
