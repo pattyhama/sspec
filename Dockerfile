@@ -37,3 +37,4 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 # for debug
 RUN apachectl configtest
 RUN apachectl status
+RUN curl http://localhost:80
