@@ -30,8 +30,6 @@ EXPOSE 80
 
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
-RUN curl http://localhost:80
-RUN curl http://localhost:8080
 
 # for Apache
 # RUN echo "daemon off;" >> /etc/nginx/nginx.conf
