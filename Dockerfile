@@ -11,6 +11,12 @@ MAINTAINER Harumi Hamaoka <strodr@gmail.com>
 RUN apt-get update
 RUN apt-get upgrade -y
 
+# for Apache
+EXPOSE 80
+
+# for installing Apache
+RUN apt-get install links
+
 # for installing Chef
 RUN apt-get install -y curl
 
@@ -24,9 +30,6 @@ RUN curl -L http://www.opscode.com/chef/install.sh | bash
 ADD cookbooks ${CHEF_REPO}/cookbooks
 ADD solo.rb ${CHEF_REPO}/solo.rb
 ADD localhost.json ${CHEF_REPO}/localhost.json
-
-# for Apache
-EXPOSE 80
 
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
