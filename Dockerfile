@@ -31,6 +31,10 @@ EXPOSE 80
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 
+# for debug
+RUN apachectl configtest
+RUN apachectl status
+
 # for Apache
 # RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # RUN mkdir /etc/nginx/ssl
