@@ -41,4 +41,5 @@ RUN apachectl configtest
 RUN apachectl status
 RUN ps aux | grep apache
 RUN curl http://localhost:80 || apachectl start ; echo $?
+RUN netstat -n
 RUN ps aux | grep apache
