@@ -26,7 +26,8 @@ before_script:
 # - docker attach melody
 script:
 - bundle exec rspec spec/melody/apache2_spec.rb
-- bundle exec rspec spec/melody/package_spec.rb
+# - bundle exec rspec spec/melody/package_spec.rb
+- bundle exec rspec spec/melody/docker_spec.rb
 - bundle exec foodcritic cookbooks/
 - bundle exec rubocop ./
 notifications:
