@@ -34,7 +34,6 @@ EXPOSE 80
 # Run Apache at the start, and run Bash
 ENTRYPOINT apachectl start && /bin/bash
 # CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
-# CMD ["/usr/sbin/apache2", "-DFOREGROUND"]
 
 # for debug <from here>
 # for installing Apache
@@ -46,7 +45,7 @@ ENTRYPOINT apachectl start && /bin/bash
 # RUN ps aux | grep apache
 # RUN curl http://localhost:80 || apachectl start ; echo $?
 # for installing for debug e.g. netstat
-RUN apt-get install -y net-tools
-RUN netstat -n
-RUN ps aux | grep apache
+# RUN apt-get install -y net-tools
+# RUN netstat -n
+# RUN ps aux | grep apache
 # for debug <to here>
