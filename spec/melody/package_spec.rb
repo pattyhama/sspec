@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # Check installed packages
-%w(chef vim traceroute).each do |pkg|
+%w(chef vim traceroute net-tools).each do |pkg|
   describe package(pkg) do
     it { should be_installed }
   end

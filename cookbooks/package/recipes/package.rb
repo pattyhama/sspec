@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w(vim traceroute).each do |pkg|
+%w(vim traceroute net-tools).each do |pkg|
   package pkg do
     action :install
   end
