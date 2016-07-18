@@ -30,6 +30,7 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 
 # for Apache
 EXPOSE 80
+ENTRYPOINT apachectl start && /bin/bash
 # CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 # CMD ["/usr/sbin/apache2", "-DFOREGROUND"]
 

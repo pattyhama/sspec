@@ -20,8 +20,8 @@ before_script:
 # - docker build -t melody .
 # Run the image with port redirection from host 8080 to 80
 # - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
-# - docker run -d --name $TARGET_CONTAINER_ID melody
-- docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 -D NO_DETACH -D FOREGROUND
+- docker run -d --name $TARGET_CONTAINER_ID melody
+# - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 -D NO_DETACH -D FOREGROUND
 # - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 start && tail -f /dev/null
 - docker ps -a
 # for debug
