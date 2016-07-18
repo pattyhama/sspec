@@ -7,11 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# %w(vim traceroute).each do |pkg|
-#  package pkg do
-#    action :install
-#  end
-# end
+%w(vim traceroute).each do |pkg|
+  package pkg do
+    action :install
+  end
+end
 
 gem_package 'pry' do
   action :install
