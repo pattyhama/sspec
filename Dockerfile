@@ -30,6 +30,8 @@ RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
 
 # for Apache
 EXPOSE 80
+
+# Run Apache at the start, and run Bash
 ENTRYPOINT apachectl start && /bin/bash
 # CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 # CMD ["/usr/sbin/apache2", "-DFOREGROUND"]
@@ -37,14 +39,14 @@ ENTRYPOINT apachectl start && /bin/bash
 # for debug <from here>
 # for installing Apache
 # RUN apt-get install -y links
-# for installing for debug e.g. netstat
-# RUN apt-get install -y net-tools
 # RUN cat /etc/passwd
 # RUN cat /etc/group
 # RUN apachectl configtest
 # RUN apachectl status
 # RUN ps aux | grep apache
 # RUN curl http://localhost:80 || apachectl start ; echo $?
-# RUN netstat -n
-# RUN ps aux | grep apache
+# for installing for debug e.g. netstat
+RUN apt-get install -y net-tools
+RUN netstat -n
+RUN ps aux | grep apache
 # for debug <to here>
