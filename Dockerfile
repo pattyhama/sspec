@@ -45,7 +45,7 @@ ENTRYPOINT apachectl start && /bin/bash
 # RUN ps aux | grep apache
 # RUN curl http://localhost:80 || apachectl start ; echo $?
 # for installing for debug e.g. netstat
-# RUN apt-get install -y net-tools
-# RUN netstat -n
-# RUN ps aux | grep apache
+RUN apt-get install -y net-tools
+RUN netstat -n
+RUN ps aux | grep apache
 # for debug <to here>
