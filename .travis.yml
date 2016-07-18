@@ -15,19 +15,20 @@ before_script:
 # Create image named melody
 # for no cache
 - docker build --no-cache -t melody .
+# Show image
+- docker images
 # - docker build -t melody .
 # Run the image with port redirection from host 8080 to 80
 # - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody
-# - docker run -d --name $TARGET_CONTAINER_ID melody
-- docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 -D NO_DETACH -D FOREGROUND
+- docker run -d --name $TARGET_CONTAINER_ID melody
+#- docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 -D NO_DETACH -D FOREGROUND
 # - docker run -p 8080:80 -d --name $TARGET_CONTAINER_ID melody /usr/sbin/apache2 start && tail -f /dev/null
-- docker ps
+- docker ps -a
 # for debug
 # - docker attach melody
 script:
 - bundle exec rspec spec/melody/apache2_spec.rb
 # - bundle exec rspec spec/melody/package_spec.rb
-- bundle exec rspec spec/melody/docker_spec.rb
 - bundle exec foodcritic cookbooks/
 - bundle exec rubocop ./
 notifications:

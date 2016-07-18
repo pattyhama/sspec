@@ -1,9 +1,15 @@
+# coding : utf-8
 require 'serverspec'
 require 'docker'
 
-# Test Docker with Serverspec
+# set backend as docker
 set :backend, :docker
+# set docker_url as DOCKER_HOST
+set :docker_url, ENV['DOCKER_HOST']
 set :docker_image, ENV['TARGET_CONTAINER_ID']
+
+# disable ssl (TODO https://github.com/swipely/docker-api/issues/202)
+Excon.defaults[:ssl_verify_peer] = false
 
 if ENV['ASK_SUDO_PASSWORD']
   begin
