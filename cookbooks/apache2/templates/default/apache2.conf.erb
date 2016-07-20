@@ -5,6 +5,9 @@
 
 ServerRoot "<%= node['apache']['dir'] %>"
 
+# Add to eliminate error: "Could not reliably determine the server's fully qualified domain name"
+ServerName "<%= node['apache']['hostname'] %>"
+
 #
 # The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
 #

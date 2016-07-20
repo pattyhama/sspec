@@ -6,6 +6,16 @@ apache2 Cookbook
 [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/svanzoest-cookbooks/apache2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## Notes:
+- Following are customized setting for this apache2
+ - 1-1. Add to apache2.conf.erb
+ ```ServerName "<%= node['apache']['hostname'] %>"```
+ - 1-2. Add to /apache2/attributes/default.rb
+ ```default['apache']['hostname']    = 'localhost'```
+ - Reason: To eliminate error: Could not reliably determine the server's fully qualified domain name
+
+
+## Description:
 This cookbook provides a complete Debian/Ubuntu style Apache HTTPD
 configuration. Non-Debian based distributions such as Red Hat/CentOS,
 ArchLinux and others supported by this cookbook will have a
@@ -103,7 +113,7 @@ Usage
 =====
 
 Using this cookbook is relatively straightforward. It is recommended to create
-a project or organization specific [wrapper cookbook](https://www.chef.io/blog/2013/12/03/doing-wrapper-cookbooks-right/) 
+a project or organization specific [wrapper cookbook](https://www.chef.io/blog/2013/12/03/doing-wrapper-cookbooks-right/)
 and add the desired recipes to the run list of a node, or create a role. Depending on your
 environment, you may have multiple roles that use different recipes
 from this cookbook. Adjust any attributes as desired. For example, to
@@ -383,7 +393,7 @@ Definitions
 ===========
 
 The cookbook provides a few definitions. At some point in the future
-these definitions will be refactored into custom resources see 
+these definitions will be refactored into custom resources see
 [issue 414](https://github.com/svanzoest-cookbooks/apache2/issues/414).
 
 apache\_conf
