@@ -18,6 +18,11 @@ describe port(80) do
   it { should be_listening }
 end
 
+# Check file contents
+describe file('/etc/apache2/apache2.conf') do
+  it { should be_file }
+  its(:content) { should match /ServerName localhost/ }
+end
 # Check if file exists
 # ['/var/www/index.html'].each do |file|
 #   describe file(file) do
