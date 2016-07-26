@@ -10,8 +10,12 @@ apache2 Cookbook
 - Following are customized setting for this apache2
  - 1-1. Add to apache2.conf.erb
  ```ServerName "<%= node['apache']['hostname'] %>"```
- - 1-2. Add to /apache2/attributes/default.rb
- ```default['apache']['hostname']    = 'localhost'```
+ - 1-2. Add to /sspec/localhost.json
+ ```
+ "apache" : {
+  "hostname" : "localhost"
+ }
+ ```
  - Reason: To eliminate error: Could not reliably determine the server's fully qualified domain name
 
 

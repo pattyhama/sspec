@@ -162,10 +162,6 @@ when 'debian', 'ubuntu'
     end
   default['apache']['apachectl']   = '/usr/sbin/apache2ctl'
   default['apache']['dir']         = '/etc/apache2'
-
-  # Add to eliminate error: Could not reliably determine the server's fully qualified domain name
-  default['apache']['hostname']    = 'localhost'
-
   default['apache']['log_dir']     = '/var/log/apache2'
   default['apache']['error_log']   = 'error.log'
   default['apache']['access_log']  = 'access.log'
