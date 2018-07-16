@@ -24,9 +24,3 @@ ADD localhost.json ${CHEF_REPO}/localhost.json
 
 # Run Chef
 RUN /usr/bin/chef-solo -c ${CHEF_REPO}/solo.rb -j ${CHEF_REPO}/localhost.json
-
-# Export port for Apache
-EXPOSE 80
-
-# Run Apache at the start, and Bash
-ENTRYPOINT apachectl start && /bin/bash

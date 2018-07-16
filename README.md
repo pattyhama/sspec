@@ -14,9 +14,6 @@ What is built from this project
 - OS:
  - Ubuntu Server 16.04
 - Installed Package:
- - Apache2
  - Basic packages
    - vim, traceroute, net-tools (from apt)
    - pry (from gem)
-- Running Condition:
- - Apache2 is run at the start, listening port 80
