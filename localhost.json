@@ -1,9 +1,5 @@
 {
- "apache" : {
-	"hostname" : "localhost"
- },
- "run_list" : [
-        "recipe[package]",
-        "recipe[apache2]"
- ]
+  "run_list" : [
+    "recipe[package]"
+  ]
 }

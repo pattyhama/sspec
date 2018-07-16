@@ -24,7 +24,6 @@ before_script:
 - docker run -d --name $TARGET_CONTAINER_ID melody
 - docker ps -a
 script:
-- bundle exec rspec spec/melody/apache2_spec.rb
 - bundle exec rspec spec/melody/package_spec.rb
 - bundle exec foodcritic cookbooks/
 - bundle exec rubocop ./
